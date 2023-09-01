@@ -1,5 +1,11 @@
 import './style.css';
 
+const path = require('path');
+
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'index.html'));
+});
+
 const express = require('express');
 const socketio = require('socket.io');
 
